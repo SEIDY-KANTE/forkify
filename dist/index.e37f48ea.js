@@ -577,6 +577,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _iconsSvg = require("url:../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+i;
 console.log((0, _iconsSvgDefault.default));
 const recipeContainer = document.querySelector(".recipe");
 const timeout = function(s) {
@@ -586,8 +587,18 @@ const timeout = function(s) {
         }, s * 1000);
     });
 };
+const renderSpinner = function(parentEl) {
+    const markup = ` <div class="spinner">
+  <svg>
+    <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
+  </svg>
+</div>`;
+    parentEl.innerHTML = "";
+    parentEl.insertAdjacentHTML("afterbegin", markup);
+};
 const showRecipe = function() {
     //1. Loading Recipe
+    renderSpinner(recipeContainer);
     fetch("https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886").then((res)=>{
         if (!res.ok) throw new Error(`${res.status}`);
         console.log(res);
