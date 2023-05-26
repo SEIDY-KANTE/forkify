@@ -582,6 +582,9 @@ const timeout = function(s) {
         }, s * 1000);
     });
 };
+// https://forkify-api.herokuapp.com/v2
+///////////////////////////////////////
+const showRecipe = async function() {};
 
 },{}]},["aD7Zm","aenu9"], "aenu9", "parcelRequire3a11")
 

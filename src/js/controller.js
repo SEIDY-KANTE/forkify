@@ -8,4 +8,3 @@ const timeout = function (s) {
   });
 };
 
-
