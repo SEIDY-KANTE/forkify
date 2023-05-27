@@ -1,14 +1,19 @@
-import View from './View.js';
-import icons from 'url:../../img/icons.svg';
-class ResultsView extends View {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _View = _interopRequireDefault(require("./View.js"));
+var _icons = _interopRequireDefault(require("url:../../img/icons.svg"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+class ResultsView extends _View.default {
   _errorMessage = 'No recipes found for your query! Please try again ;)';
   _successMessage = '';
   _parentElement = document.querySelector('.results');
-
   _generateMarkup() {
-    return this._data.map(this.#generateMarkupPreview).join('');
+    return this._data.map(this.#generateMarkupPreview()).join('');
   }
-
   #generateMarkupPreview(result) {
     return `<li class="preview">
     <a class="preview__link" href="#${result.id}">
@@ -23,5 +28,5 @@ class ResultsView extends View {
   </li>`;
   }
 }
-
-export default new ResultsView();
+var _default = new ResultsView();
+exports.default = _default;

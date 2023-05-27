@@ -2760,7 +2760,7 @@ class ResultsView extends _View.default {
   _successMessage = '';
   _parentElement = document.querySelector('.results');
   _generateMarkup() {
-    return this._data.map(this.#generateMarkupPreview).join('');
+    return this._data.map(this.#generateMarkupPreview()).join('');
   }
   #generateMarkupPreview(result) {
     return `<li class="preview">
