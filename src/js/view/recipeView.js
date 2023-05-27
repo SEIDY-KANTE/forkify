@@ -1,3 +1,4 @@
+import View from './View.js';
 import icons from 'url:../../img/icons.svg';
 import fractional from 'fractional';
 
@@ -6,72 +7,11 @@ import fractional from 'fractional';
 // console.log(new Fraction(0.5).numerator); //1
 // console.log(new Fraction(0.5).denominator); //2
 
-class RecipeView {
-  #parentElement = document.querySelector('.recipe');
-  #data;
-  #errorMessage = "We couldn't find that recipe Please try another one!";
-  #successMessage =
-    'Start by searching for a recipe or an ingredient. Have fun!';
+class RecipeView extends View {
+  _parentElement = document.querySelector('.recipe');
+  _errorMessage = "We couldn't find that recipe Please try another one!";
+  _successMessage = '';
 
-  render(data) {
-    this.#data = data;
-    const markup = this.#generateMarkup();
-    this.#clearAndInsert(markup);
-  }
-
-  #clearAndInsert(markup) {
-    this.#parentElement.innerHTML = '';
-    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
-  }
-
-  renderSpinner = function () {
-    const markup = ` <div class="spinner">
-    <svg>
-      <use href="${icons}#icon-loader"></use>
-    </svg>
-  </div>`;
-    this.#clearAndInsert(markup);
-  };
-
-  #generateMarkupIngredient(ingredient) {
-    return ` <li class="recipe__ingredient">
-    <svg class="recipe__icon">
-      <use href="${icons}#icon-check"></use>
-    </svg>
-    <div class="recipe__quantity">${
-      ingredient.quantity ? new Fraction(ingredient.quantity).toString() : ''
-    }</div>
-    <div class="recipe__description">
-      <span class="recipe__unit">${ingredient.unit}</span>
-      ${ingredient.description}
-    </div>
-  </li>`;
-  }
-
-  renderError(message = this.#errorMessage) {
-    const markup = `<div class="error">
-    <div>
-      <svg>
-        <use href="${icons}#icon-alert-triangle"></use>
-      </svg>
-    </div>
-    <p>${message}</p>
-  </div>`;
-    this.#clearAndInsert(markup);
-  }
-
-  renderMessage(message = this.#successMessage) {
-    const markup = ` <div class="recipe">
-    <div class="message">
-      <div>
-        <svg>
-          <use href="${icons}#icon-smile"></use>
-        </svg>
-      </div>
-      <p>${message}</p>
-    </div>`;
-    this.#clearAndInsert(markup);
-  }
   //Publisher-Sucriber Pattern
   addHandlerRender(handler) {
     ['hashchange', 'load'].forEach(event =>
@@ -79,8 +19,8 @@ class RecipeView {
     );
   }
 
-  #generateMarkup() {
-    const recipe = this.#data;
+  _generateMarkup() {
+    const recipe = this._data;
     return `<figure class="recipe__fig">
       <img src="${recipe.image}" alt="${recipe.title}" class="recipe__img" />
       <h1 class="recipe__title">
@@ -122,9 +62,7 @@ class RecipeView {
       </div>
 
       <div class="recipe__user-generated">
-        <svg>
-          <use href="${icons}#icon-user"></use>
-        </svg>
+       
       </div>
       <button class="btn--round">
         <svg class="">
@@ -137,7 +75,7 @@ class RecipeView {
       <h2 class="heading--2">Recipe ingredients</h2>
       <ul class="recipe__ingredient-list">
       ${recipe.ingredients
-        .map(ingredient => this.#generateMarkupIngredient(ingredient))
+        .map(ingredient => this._generateMarkupIngredient(ingredient))
         .join('')}
       </ul>
     </div>
