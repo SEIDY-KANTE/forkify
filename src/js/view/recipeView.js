@@ -1,4 +1,11 @@
 import icons from 'url:../../img/icons.svg';
+import fractional from 'fractional';
+
+// console.log(new Fraction(0.5));
+// console.log(new Fraction(0.5).toString()); //1/2
+// console.log(new Fraction(0.5).numerator); //1
+// console.log(new Fraction(0.5).denominator); //2
+
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
   #data;
@@ -23,6 +30,21 @@ class RecipeView {
     this.#clear();
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   };
+
+  #generateMarkupIngredient(ingredient) {
+    return ` <li class="recipe__ingredient">
+    <svg class="recipe__icon">
+      <use href="${icons}#icon-check"></use>
+    </svg>
+    <div class="recipe__quantity">${
+      ingredient.quantity ? new Fraction(ingredient.quantity).toString() : ''
+    }</div>
+    <div class="recipe__description">
+      <span class="recipe__unit">${ingredient.unit}</span>
+      ${ingredient.description}
+    </div>
+  </li>`;
+  }
 
   #generateMarkup() {
     const recipe = this.#data;
@@ -82,20 +104,8 @@ class RecipeView {
       <h2 class="heading--2">Recipe ingredients</h2>
       <ul class="recipe__ingredient-list">
       ${recipe.ingredients
-        .map(
-          ingredient => ` <li class="recipe__ingredient">
-      <svg class="recipe__icon">
-        <use href="${icons}#icon-check"></use>
-      </svg>
-      <div class="recipe__quantity">${ingredient.quantity}</div>
-      <div class="recipe__description">
-        <span class="recipe__unit">${ingredient.unit}</span>
-        ${ingredient.description}
-      </div>
-    </li>`
-        )
+        .map(ingredient => this.#generateMarkupIngredient(ingredient))
         .join('')}
-       
 
         <li class="recipe__ingredient">
           <svg class="recipe__icon">
