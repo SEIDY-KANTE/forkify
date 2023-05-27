@@ -1,0 +1,17 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+class SearchView {
+  #parentEl = document.querySelector('.search');
+  getQuery() {
+    return this.#parentEl.querySelector('.search__field').value;
+  }
+  addHandlerSearh(handler) {
+    this.#parentEl.addEventListener;
+  }
+}
+var _default = new SearchView();
+exports.default = _default;
