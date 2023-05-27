@@ -24,9 +24,8 @@ const controlRecipes = async function () {
 
     //2) Rendering recipe
     recipeView.render(model.state.recipe);
-
   } catch (e) {
-    alert(e);
+    console.error(`Upps!! ${e.message} 🔥`);
   }
 };
 

@@ -1,0 +1,21 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getJSON = void 0;
+var _regeneratorRuntime = require("regenerator-runtime");
+const getJSON = async function (url) {
+  try {
+    const resp = await fetch(url);
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(`${data.message} (${resp.status})`);
+
+    //console.log(resp);
+    //console.log(data);
+    return data;
+  } catch (e) {
+    console.error(`${e.message} 🔥`);
+  }
+};
+exports.getJSON = getJSON;

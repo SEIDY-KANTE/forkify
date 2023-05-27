@@ -1,0 +1,21 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getJSON = void 0;
+var _regeneratorRuntime = require("regenerator-runtime");
+var _config = _interopRequireDefault(require("../config.js"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const getJSON = async function (hashId) {
+  try {
+    const resp = await fetch(`${_config.default}/${hashId}`);
+    //console.log(resp);
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(`${resp.status} ${resp.status}`);
+    console.log(data);
+  } catch (e) {
+    //alert(e);
+  }
+};
+exports.getJSON = getJSON;

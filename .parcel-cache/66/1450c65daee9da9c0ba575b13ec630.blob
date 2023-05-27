@@ -1,0 +1,30 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.state = exports.loadRecipe = void 0;
+var _regeneratorRuntime = require("regenerator-runtime");
+var _helpers = require("./view/helpers.js");
+const state = {
+  recipe: {}
+};
+exports.state = state;
+const loadRecipe = async function (hashId) {
+  const {
+    recipe
+  } = (0, _helpers.getJSON)(h).data;
+  state.recipe = {
+    id: recipe.id,
+    title: recipe.title,
+    publisher: recipe.publisher,
+    sourceUrl: recipe.source_url,
+    image: recipe.image_url,
+    cookingTime: recipe.cooking_time,
+    ingredients: recipe.ingredients,
+    servings: recipe.servings
+  };
+
+  // console.log(state.recipe);
+};
+exports.loadRecipe = loadRecipe;
