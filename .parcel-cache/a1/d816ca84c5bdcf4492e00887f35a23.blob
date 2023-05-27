@@ -1986,7 +1986,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getJSON = void 0;
 var _regeneratorRuntime = require("regenerator-runtime");
-var _config = require("./config.js");
+var _config = require("./config");
 const timeout = s => new Promise(function (_, reject) {
   setTimeout(function () {
     reject(new Error(`Request took too long! Timeout after ${s} second`));
@@ -2006,7 +2006,7 @@ const getJSON = async function (url) {
   }
 };
 exports.getJSON = getJSON;
-},{"regenerator-runtime":"e155e0d3930b156f86c48e8d05522b16","./config.js":"09212d541c5c40ff2bd93475a904f8de"}],"09212d541c5c40ff2bd93475a904f8de":[function(require,module,exports) {
+},{"regenerator-runtime":"e155e0d3930b156f86c48e8d05522b16","./config":"09212d541c5c40ff2bd93475a904f8de"}],"09212d541c5c40ff2bd93475a904f8de":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

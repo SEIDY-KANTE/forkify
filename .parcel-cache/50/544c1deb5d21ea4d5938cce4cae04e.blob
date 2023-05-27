@@ -1,18 +1,21 @@
-import { async } from 'regenerator-runtime';
-import { TIMEOUT_SEC } from './config.js';
+"use strict";
 
-const timeout = s =>
-  new Promise(function (_, reject) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getJSON = void 0;
+var _regeneratorRuntime = require("regenerator-runtime");
+const timeout = function (s) {
+  return new Promise(function (_, reject) {
     setTimeout(function () {
       reject(new Error(`Request took too long! Timeout after ${s} second`));
     }, s * 1000);
   });
-
-export const getJSON = async function (url) {
+};
+const getJSON = async function (url) {
   try {
-    const resp = await Promise.race([fetch(url), timeout(TIMEOUT_SEC)]);
+    const resp = await fetch(url);
     const data = await resp.json();
-
     if (!resp.ok) throw new Error(`${data.message} (${resp.status})`);
 
     //console.log(resp);
@@ -22,3 +25,4 @@ export const getJSON = async function (url) {
     throw e;
   }
 };
+exports.getJSON = getJSON;

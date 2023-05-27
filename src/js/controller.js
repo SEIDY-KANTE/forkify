@@ -5,14 +5,6 @@ import recipeView from './view/recipeView.js';
 
 //console.log(icons);
 
-const timeout = function (s) {
-  return new Promise(function (_, reject) {
-    setTimeout(function () {
-      reject(new Error(`Request took too long! Timeout after ${s} second`));
-    }, s * 1000);
-  });
-};
-
 const controlRecipes = async function () {
   try {
     const hashId = window.location.hash.slice(1);
