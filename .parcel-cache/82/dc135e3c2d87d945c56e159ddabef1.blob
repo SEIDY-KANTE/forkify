@@ -412,12 +412,9 @@ const controlRecipes = async function () {
     console.error(`Upps!! ${e.message} 🔥`);
   }
 };
-
-//Publisher-Sucriber Pattern Implementation
 const init = function () {
-  _recipeView.default.addHandlerRender(controlRecipes);
+  _recipeView.default.addHandlerRender(recip);
 };
-init();
 },{"core-js/modules/web.immediate.js":"140df4f8e97a45c53c66fead1f5a9e92","regenerator-runtime":"e155e0d3930b156f86c48e8d05522b16","./model.js":"aabf248f40f7693ef84a0cb99f385d1f","./view/recipeView.js":"5f448afcf378a99019c9e817994af38c"}],"140df4f8e97a45c53c66fead1f5a9e92":[function(require,module,exports) {
 var $ = require('../internals/export');
 var global = require('../internals/global');
@@ -2069,11 +2066,7 @@ class RecipeView {
     </div>
   </li>`;
   }
-
-  //Publisher-Sucriber Pattern
-  addHandlerRender(handler) {
-    ['hashchange', 'load'].forEach(event => window.addEventListener(event, handler));
-  }
+  addHandlerRender(handler) {}
   #generateMarkup() {
     const recipe = this.#data;
     return `<figure class="recipe__fig">

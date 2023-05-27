@@ -412,8 +412,6 @@ const controlRecipes = async function () {
     console.error(`Upps!! ${e.message} 🔥`);
   }
 };
-
-//Publisher-Sucriber Pattern Implementation
 const init = function () {
   _recipeView.default.addHandlerRender(controlRecipes);
 };
@@ -2069,8 +2067,6 @@ class RecipeView {
     </div>
   </li>`;
   }
-
-  //Publisher-Sucriber Pattern
   addHandlerRender(handler) {
     ['hashchange', 'load'].forEach(event => window.addEventListener(event, handler));
   }
