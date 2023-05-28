@@ -1,0 +1,20 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _View = _interopRequireDefault(require("./View.js"));
+var _icons = _interopRequireDefault(require("../../img/icons"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+class PaginationView extends _View.default {
+  _parentElement = document.querySelector('.pagination');
+  _generateMarkup() {
+    //Page 1, and there are other pages
+    //Page 1, and there NO other pages
+    //Last page
+    //Other page
+  }
+}
+var _default = new PaginationView();
+exports.default = _default;

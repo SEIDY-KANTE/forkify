@@ -1,0 +1,34 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _View = _interopRequireDefault(require("./View.js"));
+var _icons = _interopRequireDefault(require("url:../../img/icons.svg"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+class PaginationView extends _View.default {
+  _parentElement = document.querySelector('.pagination');
+  _generateMarkup() {
+    const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
+    console.log(numPages);
+    //Page 1, and there are other pages
+    if (this._data.page === 1 && numPages > 1) {
+      return 'Page 1, others';
+    }
+    //Page 1, and there NO other pages
+    else if (this._data.page === 1 && numPages === 1) {
+      return 'Only page 1';
+    }
+    //Last page
+    else if (this._data.page === numPages) {
+      return 'Last page 1';
+    }
+    //Other page
+    else {
+      return 'Other page';
+    }
+  }
+}
+var _default = new PaginationView();
+exports.default = _default;

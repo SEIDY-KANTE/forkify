@@ -1,0 +1,66 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.state = exports.loadSearchResults = exports.loadRecipe = exports.getSearchResultsPage = void 0;
+var _regeneratorRuntime = require("regenerator-runtime");
+var _config = require("./config.js");
+var _helpers = require("./helpers.js");
+const state = {
+  recipe: {},
+  search: {
+    query: '',
+    results: [],
+    resultsPerPage: _config.RESULT_PER_PAGE
+  }
+};
+exports.state = state;
+const loadRecipe = async function (hashId) {
+  try {
+    const data = await (0, _helpers.getJSON)(`${_config.API_URL}/${hashId}`);
+    const {
+      recipe
+    } = data.data;
+    state.recipe = {
+      id: recipe.id,
+      title: recipe.title,
+      publisher: recipe.publisher,
+      sourceUrl: recipe.source_url,
+      image: recipe.image_url,
+      cookingTime: recipe.cooking_time,
+      ingredients: recipe.ingredients,
+      servings: recipe.servings
+    };
+    // console.log(state.recipe);
+  } catch (e) {
+    throw e;
+  }
+};
+exports.loadRecipe = loadRecipe;
+const loadSearchResults = async function (query) {
+  try {
+    state.search.query = query;
+    const data = await (0, _helpers.getJSON)(`${_config.API_URL}/?search=${query}`);
+    //console.log(data);
+
+    state.search.results = data.data.recipes.map(recipe => {
+      return {
+        id: recipe.id,
+        title: recipe.title,
+        publisher: recipe.publisher,
+        image: recipe.image_url
+      };
+    });
+    //console.log(state.search.results);
+  } catch (error) {
+    throw error;
+  }
+};
+exports.loadSearchResults = loadSearchResults;
+const getSearchResultsPage = function (page) {
+  const start = (page - 1) * 10;
+  const end = page * state.se;
+  return state.search.results.slice(start, edn);
+};
+exports.getSearchResultsPage = getSearchResultsPage;
