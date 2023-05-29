@@ -1,0 +1,88 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.updateServings = exports.state = exports.loadSearchResults = exports.loadRecipe = exports.getSearchResultsPage = exports.addBookmark = void 0;
+var _regeneratorRuntime = require("regenerator-runtime");
+var _config = require("./config.js");
+var _helpers = require("./helpers.js");
+const state = {
+  recipe: {},
+  search: {
+    query: '',
+    page: 1,
+    results: [],
+    resultsPerPage: _config.RESULT_PER_PAGE
+  },
+  bookmarks: []
+};
+exports.state = state;
+const loadRecipe = async function (hashId) {
+  try {
+    const data = await (0, _helpers.getJSON)(`${_config.API_URL}/${hashId}`);
+    const {
+      recipe
+    } = data.data;
+    state.recipe = {
+      id: recipe.id,
+      title: recipe.title,
+      publisher: recipe.publisher,
+      sourceUrl: recipe.source_url,
+      image: recipe.image_url,
+      cookingTime: recipe.cooking_time,
+      ingredients: recipe.ingredients,
+      servings: recipe.servings
+    };
+    // console.log(state.recipe);
+  } catch (e) {
+    throw e;
+  }
+};
+exports.loadRecipe = loadRecipe;
+const loadSearchResults = async function (query) {
+  try {
+    state.search.query = query;
+    const data = await (0, _helpers.getJSON)(`${_config.API_URL}/?search=${query}`);
+    //console.log(data);
+
+    state.search.results = data.data.recipes.map(recipe => {
+      return {
+        id: recipe.id,
+        title: recipe.title,
+        publisher: recipe.publisher,
+        image: recipe.image_url
+      };
+    });
+    //console.log(state.search.results);
+    //Reset page to 1
+    state.search.page = 1;
+  } catch (error) {
+    throw error;
+  }
+};
+exports.loadSearchResults = loadSearchResults;
+const getSearchResultsPage = function () {
+  let page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : state.search.page;
+  state.search.page = page;
+  const start = (page - 1) * state.search.resultsPerPage;
+  const end = page * state.search.resultsPerPage;
+  return state.search.results.slice(start, end);
+};
+exports.getSearchResultsPage = getSearchResultsPage;
+const updateServings = function (newServings) {
+  state.recipe.ingredients.forEach(ing => {
+    //newQt=oldQt*newServings/oldServings
+    ing.quantity = ing.quantity * newServings / state.recipe.servings;
+  });
+  state.recipe.servings = newServings;
+};
+exports.updateServings = updateServings;
+const addBookmark = function (recipe) {
+  //Add bookmark
+  state.bookmarks.push(recipe);
+
+  //Mark current recipe as bookmark
+  if (recipe.id === state.recipe.id) state.recipe.boo;
+};
+exports.addBookmark = addBookmark;

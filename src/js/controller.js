@@ -4,6 +4,7 @@ import * as model from './model.js';
 import recipeView from './view/recipeView.js';
 import searchView from './view/searchView.js';
 import resultsView from './view/resultsView.js';
+import bookmarksView from './view/bookmarksView.js';
 import paginationView from './view/paginationView.js';
 
 import { async } from 'regenerator-runtime';
@@ -18,7 +19,8 @@ const controlRecipes = async function () {
 
     //0) Update results view mark selected search result
     resultsView.update(model.getSearchResultsPage());
-    
+    bookmarksView.update(model.state.bookmarks);
+
     //1) Loading Recipe
     await model.loadRecipe(hashId);
 
@@ -68,10 +70,24 @@ const controlServings = function (newServings) {
   recipeView.update(model.state.recipe);
 };
 
+const controlAddBookmark = function () {
+  //1) Add/Remove bookmark
+  if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
+  else model.deleteBookmark(model.state.recipe.id);
+  // console.log(model.state.recipe.bookmarked);
+
+  //2) Update recipe view
+  recipeView.update(model.state.recipe);
+
+  //3) Render bookmarks
+  bookmarksView.render(model.state.bookmarks);
+};
+
 //Publisher-Sucriber Pattern Implementation
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
+  recipeView.addHandlerBookmark(controlAddBookmark);
   searchView.addHandlerSearh(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
 };
