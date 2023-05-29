@@ -16,7 +16,10 @@ const controlRecipes = async function () {
     if (!hashId) return;
     recipeView.renderSpinner();
 
-    //1. Loading Recipe
+    //0) Update results view mark selected search result
+    resultsView.update(model.getSearchResultsPage());
+    
+    //1) Loading Recipe
     await model.loadRecipe(hashId);
 
     //2) Rendering recipe
@@ -61,7 +64,8 @@ const controlServings = function (newServings) {
   model.updateServings(newServings);
 
   //Update the recipe view
-  recipeView.render(model.state.recipe);
+  //recipeView.render(model.state.recipe);
+  recipeView.update(model.state.recipe);
 };
 
 //Publisher-Sucriber Pattern Implementation

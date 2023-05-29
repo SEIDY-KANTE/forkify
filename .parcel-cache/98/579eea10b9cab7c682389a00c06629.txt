@@ -56,7 +56,7 @@
 81C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\features\url\index.js133295917470837352 0
 105C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\packager-raw-url\node_modules\chalk\readme.md133295919201500293 0
 110C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\runtime-js\node_modules\@parcel\utils\src\.babelrc133295919345415154 0
-43C:\Users\ACER\Documents\GitHub\forkify\dist133297580075414523 1
+43C:\Users\ACER\Documents\GitHub\forkify\dist133298547260297093 1
 88C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\stable\instance\trim-left.js133295917485208546 0
 74C:\Users\ACER\Documents\GitHub\forkify\node_modules\ajv\lib\dot\_limit.jst133295919248409227 0
 86C:\Users\ACER\Documents\GitHub\forkify\node_modules\postcss-discard-empty\package.json133295919186086158 0
@@ -269,7 +269,7 @@
 57C:\Users\ACER\Documents\GitHub\forkify\src\sass\main.scss133006684206146175 0
 89C:\Users\ACER\Documents\GitHub\forkify\node_modules\cosmiconfig\dist\getPropertyByPath.js133295919225838229 0
 123C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\transformer-postcss\node_modules\@parcel\utils\lib\TapStream.js133295919344479893 0
-54C:\Users\ACER\Documents\GitHub\forkify\src\js\model.js133297580072165479 0
+54C:\Users\ACER\Documents\GitHub\forkify\src\js\model.js133298378012996520 0
 50C:\Users\ACER\Documents\GitHub\forkify\src\js\view133297433625454223 1
 76C:\Users\ACER\Documents\GitHub\forkify\node_modules\diffie-hellman\readme.md133295919203995945 0
 61C:\Users\ACER\Documents\GitHub\forkify\node_modules\get-value133295919184660821 1
@@ -366,7 +366,7 @@
 70C:\Users\ACER\Documents\GitHub\forkify\node_modules\lodash\fp\slice.js133295919378899626 0
 71C:\Users\ACER\Documents\GitHub\forkify\node_modules\base-x\package.json133295700735797733 0
 103C:\Users\ACER\Documents\GitHub\forkify\node_modules\@babel\runtime\helpers\initializerDefineProperty.js133295919279148304 0
-55C:\Users\ACER\Documents\GitHub\forkify\src\js\config.js133297427846707247 0
+55C:\Users\ACER\Documents\GitHub\forkify\src\js\config.js133297868761803628 0
 102C:\Users\ACER\Documents\GitHub\forkify\node_modules\emphasize\node_modules\supports-color\package.json133295919177714210 0
 77C:\Users\ACER\Documents\GitHub\forkify\node_modules\xmlchars\xml\1.0\ed4.d.ts133295919223887750 0
 63C:\Users\ACER\Documents\GitHub\forkify\node_modules\getpass\lib133295919199805052 1
@@ -412,11 +412,11 @@
 69C:\Users\ACER\Documents\GitHub\forkify\node_modules\boolbase\index.js133295700736207767 0
 80C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\transformer-toml\lib133295919218318049 1
 73C:\Users\ACER\Documents\GitHub\forkify\node_modules\is-callable\README.md133295919215092371 0
-59C:\Users\ACER\Documents\GitHub\forkify\src\js\controller.js133297462675637172 0
+59C:\Users\ACER\Documents\GitHub\forkify\src\js\controller.js133298547256820536 0
 90C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\modules\es.array.find-index.js133295917476647726 0
 96C:\Users\ACER\Documents\GitHub\forkify\node_modules\jsdom\lib\jsdom\living\window\Screen-impl.js133295919361232784 0
 92C:\Users\ACER\Documents\GitHub\forkify\node_modules\utility-types\dist\functional-helpers.js133295700736437741 0
-68C:\Users\ACER\Documents\GitHub\forkify\src\js\view\paginationView.js133297462354797941 0
+68C:\Users\ACER\Documents\GitHub\forkify\src\js\view\paginationView.js133297848713091451 0
 120C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\transformer-postcss\node_modules\@parcel\utils\src\schema.js133295919342844624 0
 86C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\features\symbol\key-for.js133295917469499027 0
 101C:\Users\ACER\Documents\GitHub\forkify\node_modules\purgecss\node_modules\supports-color\package.json133295919249264404 0
@@ -439,10 +439,10 @@
 100C:\Users\ACER\Documents\GitHub\forkify\node_modules\jsdom\lib\jsdom\living\nodes\HTMLElement-impl.js133295919349037924 0
 89C:\Users\ACER\Documents\GitHub\forkify\node_modules\parcel\node_modules\@parcel\cache\src133295919327498564 1
 94C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\es\string\virtual\code-point-at.js133295917459975730 0
-64C:\Users\ACER\Documents\GitHub\forkify\src\js\view\recipeView.js133296918775292973 0
+64C:\Users\ACER\Documents\GitHub\forkify\src\js\view\recipeView.js133298520532671498 0
 118C:\Users\ACER\Documents\GitHub\forkify\node_modules\regenerate-unicode-properties\Binary_Property\Sentence_Terminal.js133295919342934613 0
 98C:\Users\ACER\Documents\GitHub\forkify\node_modules\svgo\node_modules\color-convert\conversions.js133295919189631856 0
-65C:\Users\ACER\Documents\GitHub\forkify\src\js\view\resultsView.js133296928890354398 0
+65C:\Users\ACER\Documents\GitHub\forkify\src\js\view\resultsView.js133298544500418163 0
 108C:\Users\ACER\Documents\GitHub\forkify\node_modules\regenerate-unicode-properties\Script_Extensions\Batak.js133295919227183465 0
 106C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\workers\test\integration\workerfarm\logging.js133295700749702328 0
 100C:\Users\ACER\Documents\GitHub\forkify\node_modules\parcel\node_modules\@parcel\logger\lib\Logger.js133295919311014566 0
@@ -458,7 +458,7 @@
 111C:\Users\ACER\Documents\GitHub\forkify\node_modules\regenerate-unicode-properties\Script_Extensions\Tagbanwa.js133295919349587986 0
 76C:\Users\ACER\Documents\GitHub\forkify\node_modules\w3c-hr-time\package.json133295919200970248 0
 90C:\Users\ACER\Documents\GitHub\forkify\node_modules\sprintf-js\dist\angular-sprintf.min.js133295919205071212 0
-58C:\Users\ACER\Documents\GitHub\forkify\src\js\view\View.js133296917661317830 0
+58C:\Users\ACER\Documents\GitHub\forkify\src\js\view\View.js133298541310193816 0
 109C:\Users\ACER\Documents\GitHub\forkify\node_modules\postcss-modules-scope\node_modules\postcss\lib\postcss.js133295919230298080 0
 105C:\Users\ACER\Documents\GitHub\forkify\node_modules\postcss-modules-local-by-default\node_modules\postcss133295919220248480 1
 75C:\Users\ACER\Documents\GitHub\forkify\node_modules\typed-array-length\test133295919199945044 1
@@ -6184,7 +6184,7 @@
 81C:\Users\ACER\Documents\GitHub\forkify\node_modules\stealthy-require\package.json133295919176928970 0
 71C:\Users\ACER\Documents\GitHub\forkify\node_modules\statuses\codes.json133295919205766370 0
 97C:\Users\ACER\Documents\GitHub\forkify\node_modules\postcss-merge-longhand\dist\lib\minifyTrbl.js133295919227543502 0
-61C:\Users\ACER\Documents\GitHub\forkify\dist\main.661922b9.css133297580074703685 0
+61C:\Users\ACER\Documents\GitHub\forkify\dist\main.661922b9.css133298547259771232 0
 71C:\Users\ACER\Documents\GitHub\forkify\node_modules\statuses\HISTORY.md133295919201070261 0
 131C:\Users\ACER\Documents\GitHub\forkify\node_modules\postcss-merge-rules\node_modules\postcss-selector-parser\dist\selectors\node.js133295919256722138 0
 94C:\Users\ACER\Documents\GitHub\forkify\node_modules\@babel\helper-hoist-variables\lib\index.js133295919188691777 0
@@ -17583,7 +17583,7 @@
 134C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\transformer-coffeescript\node_modules\@parcel\source-map\dist\wasm.js.flow133295919294711193 0
 97C:\Users\ACER\Documents\GitHub\forkify\node_modules\es-abstract\2020\BigInt\unsignedRightShift.js133295919391732393 0
 78C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\stable\typed-array133295917488270568 1
-64C:\Users\ACER\Documents\GitHub\forkify\dist\favicon.f93a443d.png133297580074703685 0
+64C:\Users\ACER\Documents\GitHub\forkify\dist\favicon.f93a443d.png133298547259771232 0
 98C:\Users\ACER\Documents\GitHub\forkify\node_modules\es-abstract\2019\AbstractEqualityComparison.js133295919230388087 0
 116C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\bundler-default\node_modules\@parcel\utils\src\stream.js133295919387556460 0
 100C:\Users\ACER\Documents\GitHub\forkify\node_modules\es-abstract\2019\AbstractRelationalComparison.js133295919232578616 0
@@ -19610,7 +19610,7 @@
 81C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\stable\array\index.js133295917483823090 0
 104C:\Users\ACER\Documents\GitHub\forkify\node_modules\caniuse-lite\data\features\css-print-color-adjust.js133295700763939291 0
 84C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\stable\array\is-array.js133295917483834827 0
-70C:\Users\ACER\Documents\GitHub\forkify\dist\controller.6c04c0c1.js.map133297580075414523 0
+70C:\Users\ACER\Documents\GitHub\forkify\dist\controller.6c04c0c1.js.map133298547260297093 0
 89C:\Users\ACER\Documents\GitHub\forkify\node_modules\core-js\stable\array\last-index-of.js133295917483894852 0
 115C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\config-default\node_modules\@parcel\events\package.json133295919377082618 0
 112C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\transformer-postcss\node_modules\terser\bin\uglifyjs133295919320817120 0
@@ -25971,7 +25971,7 @@
 121C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\resolver-default\node_modules\@parcel\utils\lib\bundle-url.js133295919352303698 0
 121C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\resolver-default\node_modules\@parcel\utils\lib\collection.js133295919352593749 0
 117C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\resolver-default\node_modules\@parcel\utils\lib\config.js133295919353058926 0
-65C:\Users\ACER\Documents\GitHub\forkify\dist\main.661922b9.css.map133297580074859757 0
+65C:\Users\ACER\Documents\GitHub\forkify\dist\main.661922b9.css.map133298547259828252 0
 121C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\resolver-default\node_modules\@parcel\utils\lib\countLines.js133295919353388943 0
 121C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\resolver-default\node_modules\@parcel\utils\lib\DefaultMap.js133295919353924146 0
 133C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\optimizer-data-url\node_modules\@parcel\source-map\src\wasm\SourceMap.cpp133295919303632592 0
@@ -26680,7 +26680,7 @@
 109C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\reporter-bundle-analyzer\node_modules\terser\dist133295919311534601 1
 117C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\reporter-bundle-analyzer\node_modules\terser\package.json133295919289009894 0
 115C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\reporter-bundle-analyzer\node_modules\terser\PATRONS.md133295919289955171 0
-66C:\Users\ACER\Documents\GitHub\forkify\dist\controller.6c04c0c1.js133297580075334500 0
+66C:\Users\ACER\Documents\GitHub\forkify\dist\controller.6c04c0c1.js133298547260140830 0
 118C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\reporter-bundle-analyzer\node_modules\terser\tools\exit.js133295919323357595 0
 121C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\reporter-bundle-analyzer\node_modules\terser\tools\props.html133295919323852802 0
 111C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\packager-html\node_modules\terser\tools\domprops.js133295919380790061 0
@@ -27624,7 +27624,7 @@
 93C:\Users\ACER\Documents\GitHub\forkify\node_modules\@babel\core\lib\config\files\utils.js.map133295919231778544 0
 97C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\packager-html\node_modules\.bin\json5133295919400590792 0
 101C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\packager-html\node_modules\.bin\json5.ps1133295919400590792 0
-54C:\Users\ACER\Documents\GitHub\forkify\dist\index.html133297580074703685 0
+54C:\Users\ACER\Documents\GitHub\forkify\dist\index.html133298534809385451 0
 123C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\packager-css\node_modules\@parcel\utils\src\prettyDiagnostic.js133295919374962138 0
 102C:\Users\ACER\Documents\GitHub\forkify\node_modules\@parcel\packager-html\node_modules\.bin\terser.cmd133295919400795916 0
 112C:\Users\ACER\Documents\GitHub\forkify\node_modules\@babel\helper-create-regexp-features-plugin\lib\index.js.map133295919214199131 0
@@ -30483,7 +30483,7 @@
 64C:\Users\ACER\Documents\GitHub\forkify\dist\favicon.8b2f57bf.png133295900833544901 0
 67C:\Users\ACER\Documents\GitHub\forkify\dist\forkify.3464ddca.js.map133295707158762160 0
 62C:\Users\ACER\Documents\GitHub\forkify\dist\icons.dfd7a6db.svg133295900834649746 0
-62C:\Users\ACER\Documents\GitHub\forkify\dist\icons.eb588cc5.svg133297518446555168 0
+62C:\Users\ACER\Documents\GitHub\forkify\dist\icons.eb588cc5.svg133298547259742477 0
 61C:\Users\ACER\Documents\GitHub\forkify\dist\index.e37f48ea.js133295910460205584 0
-61C:\Users\ACER\Documents\GitHub\forkify\dist\logo.6a59e688.png133297580074703685 0
+61C:\Users\ACER\Documents\GitHub\forkify\dist\logo.6a59e688.png133298547259771232 0
 61C:\Users\ACER\Documents\GitHub\forkify\dist\logo.726d37a8.png133295900833625741 0
